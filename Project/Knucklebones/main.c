@@ -44,6 +44,7 @@ int main(int argc, char *argv[]){
     // allocate memory  
 
     int maxDie = columns * numDice; 
+    
 
     printf("nice\n");
 
