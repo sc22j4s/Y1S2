@@ -22,15 +22,37 @@ public class Point {
   private static final double MAX_LATITUDE = 90.0;
   private static final double MEAN_EARTH_RADIUS = 6.371009e+6;
 
+  private static double longitude;
+  private static double latitude; 
+  private static double elevation;
+  
+  public Point(){
+    
+  }
+
   // TODO: Create a stub for the constructor
 
   // TODO: Create a stub for getTime()
 
+  public 
+
   // TODO: Create a stub for getLatitude()
+
+  public double getLatitude(){
+    return latitude;
+  }
 
   // TODO: Create a stub for getLongitude()
 
+  public double getLongitude(){
+    return longitude;
+  }
+
   // TODO: Create a stub for getElevation()
+
+  public double getElevation(){
+    return elevation;
+  }
 
   // TODO: Create a stub for toString()
 
