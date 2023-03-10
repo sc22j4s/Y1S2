@@ -26,7 +26,7 @@ WARNNIG: DO NOT REMOVE THE STATEMENT "CREATE VIEW vCustomerPerEmployee AS"
 ============================================================================
 */
 CREATE VIEW vCustomerPerEmployee  AS
---Remove this line and complete your query for question 1 here
+
 
 
 
