@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.lang.Math;
 
 
-class main{
+class weight{
     public static void main(String[] args){
         System.out.print("Enter weight in kg: \n");
         Scanner inp = new Scanner(System.in);
