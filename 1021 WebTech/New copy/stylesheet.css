@@ -1,0 +1,160 @@
+/* Resetting some default margins and paddings */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Imports custom fonts from web */
+@font-face {
+    font-family: 'Transcend Thin';
+    src: url(fonts/FontsFree-Net-transcend-thin.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Courier New';
+    src: url(fonts/FontsFree-Net-cour.ttf) format('truetype');
+}
+
+body.homepage {
+    background: url(images/keyclub-backdrop.jpg) center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Transcend Thin', 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+h1 {
+    font-size: 60px;
+    margin-left: 40px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 6px;
+}
+
+.home-left, .home-right {
+    flex: 1;                   /* Allow both divs to take up equal space */
+    display: flex;             /* Also use Flexbox on these containers for internal layout */
+    flex-direction: column;    /* Stack the internal content vertically */
+}
+
+.home-left {
+    align-items: flex-start;
+    padding-left: 15%;
+}
+
+.home-right {
+    align-items: flex-end;
+    padding-right: 15%;
+}
+
+
+.social-section {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-section img {
+    width: 80px;
+    height: 80px;
+}
+
+.social h2 {
+    margin: 0;
+}
+
+
+h2 {
+    font-size: 40px;
+    margin: 0 50px;
+    
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    color: white; 
+    font-family: 'Courier New', 'Times New Roman', Times, serif;
+    margin: 20px 40px 0 40px;
+}
+
+#signup {
+    padding: 20px 40px;
+    font-size: 30px;
+    font-family: 'Transcend Thin', 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    background-color: #ff8f1c;
+    color: white;
+    border: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px 40px 0 40px;
+
+}
+
+.header {
+    background-color: black;
+    padding: 10 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    line-height: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.header a {
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 50px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.header a:hover {
+    background-color: white;
+    color: black;
+}
+
+.header img {
+    vertical-align: middle;
+    height: 60px; /* Adjust to your preference */
+    width: auto;
+}
+
+.header .logo-link:hover  {
+    background-color: transparent;
+    color: inherit;
+}
+
+
+
+html, body {
+    min-height: 100vh;
+    padding-top: 50px; 
+    background-color: black;
+}

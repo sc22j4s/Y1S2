@@ -6,7 +6,6 @@ class main {
 
 
 
-        System.out.println("Heasdasd"); 
 
         /*
             * objects:
@@ -19,6 +18,8 @@ class main {
             2 kings
             
             */
+        
+        System.out.println("Setting up game"); 
 
         setupBoard();
         printBoard();
@@ -26,7 +27,7 @@ class main {
     }
 
     public void setupBoard(){
-        
+        // 
     }
 
     public void printBoard(){
@@ -36,4 +37,6 @@ class main {
             }
         }
     }
+
 }
+

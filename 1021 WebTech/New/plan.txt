@@ -1,0 +1,15 @@
+CWK1: 
+
+• Contain a navigation system which allows for easy navigation between the pages of 
+the website. 
+• Demonstrate an awareness of accessibility issues i.e. using alternative text in images 
+• Make appropriate use of HTML elements 
+• Create appropriate content
+
+CWK2: 
+
+- HTML Forms 
+• Substantial amount of JavaScript (jQuery) that adds some dynamic content to the website and that is well thought out and adds 
+functionality 
+• Advanced features of HTML5, i.e. geolocation, local storage or others 
+• Consideration for the responsive web design i.e. how your website will render on different devices and screen sizes
