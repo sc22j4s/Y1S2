@@ -128,7 +128,7 @@
      }
  
      return sequence.get(minIndex);
- 
+
    }
  
    // TODO: Create a stub for highestPoint()
@@ -197,4 +197,3 @@
  
    }
  }
- 
