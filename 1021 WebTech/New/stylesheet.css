@@ -1,5 +1,4 @@
 /* Resets default margins and paddings */
-
 body, h1, p, ul, li {
     /* Eliminates any unexpected formatting */ 
     margin: 0;
@@ -7,124 +6,164 @@ body, h1, p, ul, li {
     color: white;
 }
 
+html, body {
+    min-height: 100vh;
+    padding-top: 50px; 
+    background-color: black;
+}
+
 /* Imports custom fonts from web */
-@font-face {
+@font-face { /* For headings */
     font-family: 'Transcend Thin';
     src: url(fonts/FontsFree-Net-transcend-thin.ttf) format('truetype');
 }
 
-@font-face {
+@font-face { /* For text */
     font-family: 'Courier New';
     src: url(fonts/FontsFree-Net-cour.ttf) format('truetype');
 }
 
+/* Homepage background */
 body.homepage {
     background: url(images/keyclub-backdrop.jpg) center no-repeat;
     background-size: cover;
     overflow: hidden;
 }
 
+/* Common heading standards */
 h1, h2, h3 {
     font-family: 'Transcend Thin', 'Times New Roman', Times, serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
-h1 {
-    font-size: 60px;
-    margin-left: 40px;
-}
-
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 6px;
-}
-
-.home-left, .home-right {
-    flex: 1;                   /* Allow both divs to take up equal space */
-    display: flex;             /* Also use Flexbox on these containers for internal layout */
-    flex-direction: column;    /* Stack the internal content vertically */
-}
-
-.home-left {
-    align-items: flex-start;
-    padding-left: 15%;
-}
-
-.home-right {
-    align-items: flex-end;
-    padding-right: 15%;
-}
-
-
-.social-section {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.social-section img {
-    width: 80px;
-    height: 80px;
-}
-
-.social h2 {
-    margin: 0;
-}
-
-
-h2 {
-    font-size: 40px;
-    margin: 0 50px;
-    
-}
-
-h3 {
-    font-size: 20px;
-}
-
+/* Common paragraph text standards */
 p {
     color: white; 
     font-family: 'Courier New', 'Times New Roman', Times, serif;
     margin: 20px 40px 0 40px;
 }
 
-#signup {
-    padding: 20px 40px;
-    font-size: 30px;
-    font-family: 'Transcend Thin', 'Times New Roman', Times, serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-    background-color: #ff8f1c;
-    color: white;
-    border: 5px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 20px 40px 0 40px;
 
+/* Explicit setting of h1 font size */
+h1 {
+    font-size: 60px;
 }
 
+/* Explicit setting of h1 font size */
+h2 {
+    font-size: 40px;
+    /* Spacing for subpages */
+    margin: 0 50px;  
+}
+
+/* Currently unused */
+h3 {
+    font-size: 20px;
+}
+
+/* All main homepage content, composed of home-left and home-right */
+.content {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    /* Ensures content stays in the centre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 6px;
+    font-family: 'Transcend Thin', 'Times New Roman', Times, serif;
+}
+
+
+.home-left, .home-right {
+    /* Allow both classes to take up equal space */
+    flex: 1;
+    /* Flexbox for internal layout/orientation */
+    display: flex;
+    /* Stack the internal content vertically */
+    flex-direction: column;    
+}
+
+/* For main title and signup link */
+.home-left {
+    /* Align to left side of flexbox */
+    align-items: flex-start;
+    padding-left: 15%;
+}
+
+/* For social media links (social-section) */
+.home-right {
+    /* Align to right side of flexbox */
+    align-items: flex-end;
+    padding-right: 15%;
+}
+
+/* Main homepage signup link, can be reused elsewhere */
+.signup-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff8f1c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    /* Smooth hover effect */
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+/* Signup link hover effect */
+.signup-link:hover {
+    /* Darkens colour */
+    background-color: #e37700;
+}
+
+/* Composed of social media image and text */
+.social-section {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    /* Vertically aligns image and text */
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-section:hover {
+    /* Rows highlighted on hover */
+    background-color: #555; 
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Social media logos */
+.social-section img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Defines header design for whole site */
 .header {
     background-color: black;
-    padding: 10 20px;
+    padding: 10px;
+    /* Extends to full width of window */
     width: 100%;
+    /* Doesn't move when scrolling */
     position: fixed;
+    /* Covers corners of screen */
     top: 0;
     left: 0;
-    z-index: 1000;
     line-height: 50px;
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     align-items: center;
+    /* White line separating the content */
     border-bottom: 1px solid white;
 }
 
+/* For links in header */
 .header a {
     color: white;
     padding: 10px 20px;
@@ -134,19 +173,26 @@ p {
     line-height: 50px;
     box-sizing: border-box;
     border: 2px solid transparent;
-    transition: border-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    /* Smooth color transition on hover */
+    transition: background-color 0.3s ease; 
 }
 
+/* Header links hover effect */
 .header a:hover {
+    /* Highlights links in white */
     background-color: white;
     color: black;
 }
 
+/* Header link for website currently open */
 .header a.active {
+    /* Retains white highlight while on the page */
     background-color: white;
     color: black;
 }
 
+/* For RockSoc logo in header */
 .header img {
     /* Stays in line with other elements */
     vertical-align: middle;
@@ -154,44 +200,56 @@ p {
     width: auto;
 }
 
+/* Logo hover effect */
 .header .logo-link:hover  {
+    /* Avoids hover effect */
     background-color: transparent;
     color: inherit;
 }
 
 /* Defines space to display content on */
 .subpage {
-    background-color: #252525;  /* Dark background */
+    /* Dark background */
+    background-color: #252525;  
     padding: 20px;
+    /* Curved edges */
     border-radius: 10px; 
     color: rgb(255, 255, 255); 
-    max-width: 80%;  /* For centered look */
-    margin: 0 auto;    /* Centering the div */
+    /* Centred visual margin */
+    max-width: 80%;
+    margin: 0 auto;
 }
 
-/* Formatting main heading on subpage space */
+/* Main heading on subpage space */
 .subpage h1 {
+    /* Stays in centre of page */
     text-align: center;
     margin-bottom: 30px;
-    border-bottom: 2px solid #555; 
+    /* Separates heading and content */
+    border-bottom: 2px solid #555;
     padding-bottom: 10px;
 }
 
+/* General styling for element collections on subpages */
 .row {
     display: flex;
     /* Image/Text aligned vertically */
     align-items: center;
     /* Give space between rows */
-    margin-bottom: 30px;  
-    transition: background-color 0.3s ease; 
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
+
 .row:hover {
-    /* Member highlighted on hover */
+    /* Row highlighted on hover */
     background-color: #555; 
     border-radius: 8px;
 }
 
+/* For images used on rows */
 .row img {
     width: 100px;
     height: 100px;
@@ -201,55 +259,101 @@ p {
     margin-left: 20px;
 }
 
-.subpage p {
-    margin-top: 10px;
-    line-height: 1.5;  /* Spacing between lines */
-    font-size: 20px;
+/* For audio players on rows */
+.row audio {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    /* Allows player to show all its contents */
+    flex-grow: 1;
 }
 
+/* For HTML forms used on rows */
+.row form {
+    /* Aligns content to the right*/
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+/* For form labels on rows */
+.row label {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0 20px;
+}
+
+/* For buttons on rows */
+.row button {
+    height: auto;
+    width: 80px;
+    margin-right: 10px;
+    padding: 0 20px;
+}
+
+.subpage p {
+    /* Line spacing - legibility */
+    line-height: 1.5;  
+    font-size: 20px;
+    /* Separates from following page content */
+    /* Used at top of subpage */
+    margin-bottom: 20px;
+}
+
+
+/* Composed of question and answer classes */
 .faq-list {
+    /* Remove bullet points on about.html list */
     list-style-type: none;
 }
 
+/* Hover effect for questions */
 .question:hover {
+    /* Appears clickable */
     cursor: pointer;
     color: gray;
 }
 
+
 .answer {
+    /* Initially hidden, displayed through about.js */
     display: none;
 }
 
 .answer.show {
+    /* Makes answer element appear */
     display: block;
 }
 
+/* For event classes in schedule.html */
 .event {
     text-align: center;
     margin: 20px auto;
     padding: 20px;
     /* Visually separates different events */
     border-bottom: 1px solid #ccc;
-    max-width: 600px;
+    /* Creates spacing between subpage border */
+    max-width: 80%;
 }
 
+/* Event titles */
 .event h2 {
     margin-top: 0;
 }
 
+/* Event images */
 .event img {
-    max-width: 100%;
+    /* Balances image/text size difference, reduces scrolling */
+    max-width: 60%;
     height: auto;
+    /* Curved edges */
     border-radius: 10%;
 }
 
+/* Event description */
 .event p {
     margin: 20px 10px;
 }
 
 
-html, body {
-    min-height: 100vh;
-    padding-top: 50px; 
-    background-color: black;
-}

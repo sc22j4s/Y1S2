@@ -10,25 +10,100 @@
     <!--Invokes main style sheet-->
     <link href="stylesheet.css" rel="stylesheet">
     <!--Invokes external JavaScript file-->
-    <script src="quiz.js"></script>
+    <!--Deferred loading to avoid processing errors-->
+    <script src="quiz.js" defer></script>
 </head>
 <body>
     <div class="header">
-        <!--Site logo used in place of a simple home button-->
         <a href="index.html">
-            <img src="images/rocksoc-logo.jpg" alt="Home" id="header-logo"></img>
+            <img src="images/rocksoc-logo.jpg" alt="Home" id="header-logo">
         </a>
         <a href="about.html">About</a>
         <a href="committee.html">Committee</a>
         <a href="schedule.html">Schedule</a>
+        <!-- Header styling for active page -->
         <a href="quiz.html" class="active">Quiz</a>
     </div>
 
+    <!-- Adopting typical subpage design -->
     <div class="subpage">
-        <h1>Test your knowledge</h1>
 
-        <p>Think you know our favourite bands? Name three songs.</p>
-        <p>Listen to these five songs and enter the artist <b>OR</b> song name in the box.</p>
+        <h1>Test your knowledge!</h1>
+
+        <!-- Introductory text -->
+        <p>Oh, you said you know Nirvana? Name three songs.</p>
+        <p>Listen to these snippets of five different Key Club classics and enter the artist <b>OR</b>
+             song name in the boxes.</p>
+
+        <!-- Rows comprised of of media players, forms and submission buttons -->
+        <div class="row">
+            <audio controls>
+                <source src="music/Deftones-BeQuietAndDrive(FarAway).mp3" type="audio/mpeg">
+                Browser does not support audio!
+            </audio>
+            <form>
+                <label for="input1">Answer 1:</label>
+                <input type="text" id="input1" name="song1">
+                <button type="button" id="submit1">Submit</button>
+            </form>
+        </div>
+        
+        <div class="row">
+            <audio controls>
+                <source src="music/MyChemicalRomance-I'mNotOkay(IPromise).mp3" type="audio/mpeg">
+                Browser does not support audio!
+            </audio>
+            <form>
+                <label for="input2">Answer 2:</label>
+                <input type="text" id="input2" name="song2">
+                <button type="button" id="submit2">Submit</button>
+            </form>
+        </div>
+        
+        <div class="row">
+            <audio controls>
+                <source src="music/PierceTheVeil-KingforaDayft.KellinQuinn.mp3" type="audio/mpeg">
+                Browser does not support audio!
+            </audio>
+            <form>
+                <label for="input3">Answer 3:</label>
+                <input type="text" id="input3" name="song3">
+                <button type="button" id="submit3">Submit</button>
+            </form>
+        </div>
+        
+        <div class="row">
+            <audio controls>
+                <source src="music/Slipknot-WaitAndBleed.mp3" type="audio/mpeg">
+                Browser does not support audio!
+            </audio>
+            <form>
+                <label for="input4">Answer 4:</label>
+                <input type="text" id="input4" name="song4">
+                <button type="button" id="submit4">Submit</button>
+            </form>
+        </div>
+        
+        <div class="row">
+            <audio controls>
+                <source src="music/SystemofaDown-Aerials.mp3" type="audio/mpeg">
+                Browser does not support audio!
+            </audio>
+            <form>
+                <label for="input5">Answer 5:</label>
+                <input type="text" id="input5" name="song5">
+                <button type="button" id="submit5">Submit</button>
+            </form>
+        </div>
+
+        
+        <div class="row">
+            <!--
+                Contains the game score and win message
+                Span tag used to target area of text for script to modify
+            -->
+            <p><b>Score: </b><span id="score">0</span>/5</p>
+        </div>
 
     </div>
 </body>

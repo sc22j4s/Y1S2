@@ -5,45 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aftermath</title>
-    <style>
-        body{
-            
-            background-color: black;
-            margin: 0;
-            padding-top: 20px;
-            font-family: 'Courier New', Courier, monospace;
-             
-        }
+    <link href="stylesheet.css" rel="stylesheet">
 
-        h1 {
-            text-align: center;
-            font: Helvetica;
-            font-size: 200px;
-            color:white;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: calc(100vh - 80px);
-            
-        }
-
-        input[type=text] {
-            padding: 10px;
-            font-size: 50px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            width: 80%;
-        }
-
-        #spotifyPlayer {
-            margin-top: 20px;
-        }
-    </style>
+    <script href = "getSong.js"></script>
     
 </head>
+
 <body>
     <h1>AfterMath</h1>
     <div class="container">
@@ -52,22 +19,6 @@
     </div>
     <div id="spotifyPlayer"></div>
 
-    <script>
-
-    function embedSpotify() {
-        const link = document.getElementById('spotifyLink').value;
-        const match = link.match(/track\/([a-zA-Z0-9]+)/);
-        if (match) {
-            const trackId = match[1];
-            const iframe = `
-                <iframe src="https://open.spotify.com/embed/track/${trackId}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            `;
-            document.getElementById('spotifyPlayer').innerHTML = iframe;
-        } else {
-            alert("Invalid Spotify track link!");
-        }
-    }
-    </script>
 
 </body>
 </html>
